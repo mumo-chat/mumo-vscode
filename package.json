@@ -1,0 +1,68 @@
+{
+  "name": "mumo-vscode",
+  "displayName": "mumo",
+  "description": "Consult a multi-model panel on contested decisions via MCP: architecture, plan review, strategy.",
+  "version": "0.1.0",
+  "publisher": "mumo",
+  "license": "MIT",
+  "author": {
+    "name": "Sourced LLC",
+    "email": "eric@mumo.chat"
+  },
+  "homepage": "https://mumo.chat/mcp",
+  "bugs": {
+    "url": "https://github.com/mumo-chat/mumo-vscode/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mumo-chat/mumo-vscode.git"
+  },
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "AI",
+    "Other"
+  ],
+  "keywords": [
+    "mcp",
+    "deliberation",
+    "multi-model",
+    "claude",
+    "gpt",
+    "gemini",
+    "panel",
+    "code-review",
+    "architecture"
+  ],
+  "icon": "images/icon.png",
+  "main": "./out/extension.js",
+  "contributes": {
+    "mcpServerDefinitionProviders": [
+      {
+        "id": "mumo",
+        "label": "mumo"
+      }
+    ],
+    "commands": [
+      {
+        "command": "mumo.setApiKey",
+        "title": "mumo: Set API Key"
+      },
+      {
+        "command": "mumo.openSessions",
+        "title": "mumo: Open Recent Sessions"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/vscode": "^1.101.0",
+    "typescript": "^5.9.2"
+  }
+}
