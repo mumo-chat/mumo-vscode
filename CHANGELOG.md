@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.1 — 2026-04-22
+
+Listing refresh + toolchain compatibility. No runtime behavior change.
+
+- Refreshed listing copy to lead with the cross-model reactions + iterative rounds value proposition.
+- Added screenshots to the README: Copilot Chat invocation in VS Code, the mumo.chat claim map, and a multi-round session carrying context forward.
+- Compatibility: explicit `activationEvents: []` in the manifest for `@vscode/vsce` 3.x, which now rejects `main`-declaring manifests that omit the property.
+- Compatibility: narrowed the `resolveMcpServerDefinition` `server` parameter type to `McpHttpServerDefinition` — `@types/vscode` 1.116 tightened the callback union, which surfaced a `TS2339` on `server.uri`.
+
 ## 0.1.0 — 2026-04-22
 
 Initial release.

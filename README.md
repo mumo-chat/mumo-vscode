@@ -1,8 +1,26 @@
 # mumo — VS Code extension
 
-Multi-model deliberation as MCP tools. Consult a panel of models (Claude, GPT, Gemini, Grok, Qwen, GLM, Kimi) on contested decisions — architecture choices, plan reviews, pricing tradeoffs, strategy — where a single model might be confidently wrong.
+**Multi-model responses + cross-model reactions. Want more rounds? Context carries automatically. Stop when you have what you need.**
+
+Claude, GPT, Gemini, Grok, Qwen, GLM, Kimi in parallel. For contested decisions — architecture, plan review, strategy — where a single model might be confidently wrong.
 
 For Claude Code and Claude Cowork, see [`mumo-chat/mumo-mcp`](https://github.com/mumo-chat/mumo-mcp). For Cursor, see [`mumo-chat/mumo-cursor`](https://github.com/mumo-chat/mumo-cursor).
+
+---
+
+![Copilot Chat in VS Code invokes mumo via MCP](./images/screenshot-copilot-invocation.png)
+
+*Invoke mumo from Copilot Chat — the agent routes through MCP, convenes the panel, and returns the models' synthesis inside VS Code.*
+
+![The mumo claim map — what every model agreed on, challenged, or flagged for deeper exploration](./images/screenshot-claim-map.png)
+
+*The claim map at [mumo.chat](https://mumo.chat) — each contested statement plus every model's reaction (keep, challenge, explore, core, shift). Not a consensus answer; the structure underneath it.*
+
+![A multi-round mumo session carrying context forward across rounds](./images/screenshot-rounds.png)
+
+*Context carries forward automatically — add follow-up rounds until you have what you need, without re-pasting anything.*
+
+---
 
 ## What's in the box
 

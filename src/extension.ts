@@ -32,7 +32,7 @@ export async function activate(context: vscode.ExtensionContext) {
           context.extension.packageJSON.version
         ),
       ],
-      resolveMcpServerDefinition: async (server) => {
+      resolveMcpServerDefinition: async (server: vscode.McpHttpServerDefinition) => {
         let key = await context.secrets.get(API_KEY_SECRET);
 
         if (!key) {
