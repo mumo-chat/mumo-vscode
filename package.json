@@ -2,7 +2,7 @@
   "name": "mumo-vscode",
   "displayName": "mumo",
   "description": "Multi-model responses + cross-model reactions. Want more rounds? Context carries automatically. Stop when you have what you need.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publisher": "mumo",
   "license": "MIT",
   "author": {

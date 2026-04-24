@@ -24,7 +24,7 @@ For Claude Code and Claude Cowork, see [`mumo-chat/mumo-mcp`](https://github.com
 
 ## What's in the box
 
-- **MCP server registration** — wires `https://mumo.chat/api/mcp` into VS Code's MCP provider registry. Five tools: `create_deliberation`, `append_round`, `get_session`, `list_sessions`, `list_models`.
+- **MCP server registration** — wires `https://mumo.chat/api/mcp` into VS Code's MCP provider registry. Six tools: `create_deliberation`, `append_round`, `get_session`, `list_sessions`, `list_models`, `get_credit`.
 - **Native key storage** — uses VS Code's `SecretStorage` (macOS Keychain / Windows Credential Manager / Linux libsecret). No `MUMO_API_KEY` env-var export required.
 - **Commands** — `mumo: Set API Key` (re-prompt), `mumo: Open Recent Sessions` (opens mumo.chat).
 

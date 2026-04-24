@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2 — 2026-04-24
+
+- README updated: the upstream server now exposes a sixth MCP tool, `get_credit` (wallet balance + bucket breakdown + autorefill state). No extension-side code change — the tool is registered by the server; the README update makes it visible on the Marketplace listing.
+
 ## 0.1.1 — 2026-04-22
 
 Listing refresh + toolchain compatibility. No runtime behavior change.
