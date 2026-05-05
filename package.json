@@ -2,7 +2,7 @@
   "name": "mumo-vscode",
   "displayName": "mumo",
   "description": "Multi-model deliberation panel. Diverse AI voices + claim-level reactions on contested decisions.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "publisher": "mumo",
   "license": "MIT",
   "author": {
@@ -38,7 +38,15 @@
   ],
   "icon": "images/icon.png",
   "main": "./out/extension.js",
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true,
+      "description": "mumo only stores a secret and registers a remote MCP server. No filesystem reads or command execution."
+    }
+  },
   "contributes": {
     "mcpServerDefinitionProviders": [
       {
@@ -54,6 +62,59 @@
       {
         "command": "mumo.openSessions",
         "title": "mumo: Open Recent Sessions"
+      }
+    ],
+    "configuration": {
+      "title": "mumo",
+      "properties": {
+        "mumo.serverUrl": {
+          "type": "string",
+          "default": "https://mumo.chat/api/mcp",
+          "description": "URL of the mumo MCP server. Override for self-hosted or staging endpoints."
+        }
+      }
+    },
+    "walkthroughs": [
+      {
+        "id": "mumo.gettingStarted",
+        "title": "Get started with mumo",
+        "description": "Set up multi-model deliberation in Copilot Chat — three steps.",
+        "steps": [
+          {
+            "id": "mumo.step.key",
+            "title": "Create a mumo API key",
+            "description": "Sign in at mumo.chat and create a platform key. Keys start with `mmo_live_`.\n[Open mumo.chat/settings/api-keys](https://mumo.chat/settings/api-keys)",
+            "media": {
+              "image": "media/walkthrough/01-key.svg",
+              "altText": "A key icon with the mumo brand gradient"
+            },
+            "completionEvents": [
+              "onLink:https://mumo.chat/settings/api-keys"
+            ]
+          },
+          {
+            "id": "mumo.step.paste",
+            "title": "Paste your key",
+            "description": "Run **mumo: Set API Key** and paste the value. It's stored in VS Code's `SecretStorage` (OS keychain).\n[Set API Key](command:mumo.setApiKey)",
+            "media": {
+              "image": "media/walkthrough/02-paste.svg",
+              "altText": "A clipboard with a checkmark over a key field"
+            },
+            "completionEvents": [
+              "onCommand:mumo.setApiKey"
+            ]
+          },
+          {
+            "id": "mumo.step.try",
+            "title": "Try mumo in Copilot Chat",
+            "media": {
+              "markdown": "media/walkthrough/03-try.md"
+            },
+            "completionEvents": [
+              "onCommand:workbench.action.chat.open"
+            ]
+          }
+        ]
       }
     ]
   },

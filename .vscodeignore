@@ -1,6 +1,7 @@
 .vscode/**
 .vscode-test/**
 src/**
+skills/**
 .gitignore
 .yarnrc
 vsc-extension-quickstart.md
@@ -11,6 +12,7 @@ vsc-extension-quickstart.md
 node_modules/**
 !out/**
 !images/**
+!media/**
 !LICENSE
 !README.md
 !CHANGELOG.md

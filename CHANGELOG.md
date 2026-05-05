@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.3.0 — 2026-05-05
+
+Native UX lift. The runtime MCP path is unchanged — same `https://mumo.chat/api/mcp`, same `SecretStorage`-backed key flow. What changes is everything around the install moment.
+
+- **Walkthrough** — auto-opens on first install. Three steps: create a mumo API key, paste it via the **mumo: Set API Key** command, try mumo in Copilot Chat with a copyable sample prompt. Closes the "where does the key go?" gap that previously left first-time users hunting.
+- **Status bar item** — persistent `$(comment-discussion) mumo` when configured, `$(warning) mumo: no key` when not. Clicking it opens the key prompt. Refreshes on activate, after every key-set, and on `mumo.serverUrl` config changes.
+- **`mumo.serverUrl` setting** — override the MCP endpoint for self-hosted or staging. Read inside `provideMcpServerDefinitions` so config changes take effect without a window reload; `onDidChangeConfiguration` fires the provider's `didChange` event.
+- **`untrustedWorkspaces.supported: true`** — the extension only stores a secret and registers a remote HTTP MCP server. No filesystem reads, no command execution. Trust prompt is gone.
+- **`skills/` excluded from the published `.vsix`** — VS Code has no `SKILL.md` loader, so the directory was inert dead weight in the bundle. Still in the GitHub repo as cross-repo reference.
+
 ## 0.2.0 — 2026-05-05
 
 Architecture parity with [`mumo-mcp@0.2.x`](https://github.com/mumo-chat/mumo-mcp) and [`mumo-cursor@0.2.x`](https://github.com/mumo-chat/mumo-cursor). VS Code's Copilot agent doesn't consume `SKILL.md` directly the way Claude Code and Cursor do, so the skill content ships as informational/cross-repo reference, not active behavior. The MCP server registration + native `SecretStorage` for the API key are unchanged.
