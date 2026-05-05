@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.1 — 2026-05-05
+
+Marketplace listing cleanup. No runtime behavior change.
+
+- README intro no longer directs visitors to companion plugins for other IDEs. Cross-product discovery stays in the footer Links section where it belongs.
+- "Why explicit invocation" rewritten without comparison to other agent platforms. The positive framing ("naming `mumo` routes deterministically") replaces the previous "VS Code's Copilot doesn't have what those other platforms have" framing.
+
 ## 0.3.0 — 2026-05-05
 
 Native UX lift. The runtime MCP path is unchanged — same `https://mumo.chat/api/mcp`, same `SecretStorage`-backed key flow. What changes is everything around the install moment.

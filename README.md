@@ -4,8 +4,6 @@
 
 Claude, GPT, Gemini, Grok, Qwen, GLM, Kimi in parallel. For contested decisions — architecture, plan review, strategy — where a single model might be confidently wrong.
 
-For Claude Code, see [`mumo-chat/mumo-mcp`](https://github.com/mumo-chat/mumo-mcp). For Cursor, see [`mumo-chat/mumo-cursor`](https://github.com/mumo-chat/mumo-cursor).
-
 ---
 
 ![Copilot Chat in VS Code invokes mumo via MCP](./images/screenshot-copilot-invocation.png)
@@ -51,7 +49,7 @@ See [mumo.chat/install](https://mumo.chat/install) for setup and [mumo.chat/docs
 
 ### Why explicit invocation
 
-VS Code's Copilot doesn't have a `SKILL.md` discovery mechanism the way Claude Code and Cursor do, so the auto-triggering skill from those plugins doesn't apply here. What you get is reliable MCP tool access plus VS Code's native key management. The panel is available whenever you mention `mumo` in Agent chat.
+Copilot's agent mode picks tools based on intent. Naming `mumo` in your prompt routes the call deterministically; vague phrasings like "ask a panel" may resolve to a different tool or a generic Copilot response. The panel is available whenever you mention `mumo` in Agent chat.
 
 ## Requirements
 
