@@ -4,7 +4,7 @@
 
 Claude, GPT, Gemini, Grok, Qwen, GLM, Kimi in parallel. For contested decisions — architecture, plan review, strategy — where a single model might be confidently wrong.
 
-For Claude Code and Claude Cowork, see [`mumo-chat/mumo-mcp`](https://github.com/mumo-chat/mumo-mcp). For Cursor, see [`mumo-chat/mumo-cursor`](https://github.com/mumo-chat/mumo-cursor).
+For Claude Code, see [`mumo-chat/mumo-mcp`](https://github.com/mumo-chat/mumo-mcp). For Cursor, see [`mumo-chat/mumo-cursor`](https://github.com/mumo-chat/mumo-cursor).
 
 ---
 
@@ -24,7 +24,7 @@ For Claude Code and Claude Cowork, see [`mumo-chat/mumo-mcp`](https://github.com
 
 ## What's in the box
 
-- **MCP server registration** — wires `https://mumo.chat/api/mcp` into VS Code's MCP provider registry. Six tools: `create_deliberation`, `append_round`, `get_session`, `list_sessions`, `list_models`, `get_credit`.
+- **MCP server registration** — wires `https://mumo.chat/api/mcp` into VS Code's MCP provider registry. Seven tools: `create_deliberation`, `wait_for_round`, `append_round`, `get_session`, `list_sessions`, `list_models`, `get_credit`.
 - **Native key storage** — uses VS Code's `SecretStorage` (macOS Keychain / Windows Credential Manager / Linux libsecret). No `MUMO_API_KEY` env-var export required.
 - **Commands** — `mumo: Set API Key` (re-prompt), `mumo: Open Recent Sessions` (opens mumo.chat).
 
@@ -44,7 +44,7 @@ In Copilot Chat (Agent mode), invoke mumo explicitly for reliable routing:
 - "Run this by a mumo panel"
 - "Get me a second opinion from mumo on…"
 
-See [mumo.chat/mcp](https://mumo.chat/mcp) for the tool reference, the deliberation loop, and prompt patterns.
+See [mumo.chat/install](https://mumo.chat/install) for setup and [mumo.chat/docs/mcp](https://mumo.chat/docs/mcp) for the tool reference, the deliberation loop, and prompt patterns.
 
 ### Why explicit invocation
 
@@ -58,9 +58,10 @@ The auto-triggering skill from the other mumo plugins (Claude Code, Cursor) isn'
 ## Links
 
 - Product — https://mumo.chat
-- MCP reference — https://mumo.chat/docs/mcp/reference
+- Install guide — https://mumo.chat/install
+- MCP reference — https://mumo.chat/docs/mcp
 - REST API — https://mumo.chat/docs/api
-- Claude Code / Cowork plugin — https://github.com/mumo-chat/mumo-mcp
+- Claude Code plugin — https://github.com/mumo-chat/mumo-mcp
 - Cursor plugin — https://github.com/mumo-chat/mumo-cursor
 - Issues — https://github.com/mumo-chat/mumo-vscode/issues
 

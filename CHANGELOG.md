@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0 — 2026-05-05
+
+Architecture parity with [`mumo-mcp@0.2.x`](https://github.com/mumo-chat/mumo-mcp) and [`mumo-cursor@0.2.x`](https://github.com/mumo-chat/mumo-cursor). VS Code's Copilot agent doesn't consume `SKILL.md` directly the way Claude Code and Cursor do, so the skill content ships as informational/cross-repo reference, not active behavior. The MCP server registration + native `SecretStorage` for the API key are unchanged.
+
+- `package.json` — version bump to 0.2.0, author updated to `mumo`, homepage updated to `/install`, description aligned with the family ("Multi-model deliberation panel..."), keywords reorganized.
+- README — `wait_for_round` added to the tool list (seven tools, was missing since 0.1.2). Cowork dropped from cross-references. Links repointed to `/install` and `/docs/mcp`.
+- `skills/mumo/SKILL.md`, `skills/mumo/playbooks/`, `skills/mumo/reference/` — copied over from the v0.2.x skill content for cross-repo consistency. Inert in VS Code today; if Copilot's skill story matures, no source-of-truth divergence to reconcile.
+
 ## 0.1.2 — 2026-04-24
 
 - README updated: the upstream server now exposes a sixth MCP tool, `get_credit` (wallet balance + bucket breakdown + autorefill state). No extension-side code change — the tool is registered by the server; the README update makes it visible on the Marketplace listing.

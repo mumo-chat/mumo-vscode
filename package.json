@@ -1,15 +1,15 @@
 {
   "name": "mumo-vscode",
   "displayName": "mumo",
-  "description": "Multi-model responses + cross-model reactions. Want more rounds? Context carries automatically. Stop when you have what you need.",
-  "version": "0.1.2",
+  "description": "Multi-model deliberation panel. Diverse AI voices + claim-level reactions on contested decisions.",
+  "version": "0.2.0",
   "publisher": "mumo",
   "license": "MIT",
   "author": {
-    "name": "Sourced LLC",
-    "email": "eric@mumo.chat"
+    "name": "mumo",
+    "url": "https://mumo.chat"
   },
-  "homepage": "https://mumo.chat/mcp",
+  "homepage": "https://mumo.chat/install",
   "bugs": {
     "url": "https://github.com/mumo-chat/mumo-vscode/issues"
   },
@@ -32,8 +32,9 @@
     "gpt",
     "gemini",
     "panel",
-    "code-review",
-    "architecture"
+    "architecture",
+    "design-review",
+    "code-review"
   ],
   "icon": "images/icon.png",
   "main": "./out/extension.js",
