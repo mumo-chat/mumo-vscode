@@ -26,6 +26,9 @@ For Claude Code, see [`mumo-chat/mumo-mcp`](https://github.com/mumo-chat/mumo-mc
 
 - **MCP server registration** — wires `https://mumo.chat/api/mcp` into VS Code's MCP provider registry. Seven tools: `create_deliberation`, `wait_for_round`, `append_round`, `get_session`, `list_sessions`, `list_models`, `get_credit`.
 - **Native key storage** — uses VS Code's `SecretStorage` (macOS Keychain / Windows Credential Manager / Linux libsecret). No `MUMO_API_KEY` env-var export required.
+- **Walkthrough** — auto-opens on first install: create a key, paste it, try mumo in Copilot Chat.
+- **Status bar** — shows `mumo` when configured, `mumo: no key` otherwise. Click to set the key.
+- **Settings** — override the server URL (`mumo.serverUrl`) for self-hosted or staging endpoints.
 - **Commands** — `mumo: Set API Key` (re-prompt), `mumo: Open Recent Sessions` (opens mumo.chat).
 
 ## Install
@@ -34,7 +37,7 @@ For Claude Code, see [`mumo-chat/mumo-mcp`](https://github.com/mumo-chat/mumo-mc
 ext install mumo.mumo-vscode
 ```
 
-Or search `mumo` in the Extensions panel. On first use, VS Code will prompt for your mumo API key — create one at [mumo.chat/settings/api-keys](https://mumo.chat/settings/api-keys) (keys start with `mmo_live_`).
+Or search `mumo` in the Extensions panel. The Get Started walkthrough opens automatically on first install — three steps to get you to your first deliberation. Create your mumo API key at [mumo.chat/settings/api-keys](https://mumo.chat/settings/api-keys) (keys start with `mmo_live_`).
 
 ## Using the panel
 
@@ -48,7 +51,7 @@ See [mumo.chat/install](https://mumo.chat/install) for setup and [mumo.chat/docs
 
 ### Why explicit invocation
 
-The auto-triggering skill from the other mumo plugins (Claude Code, Cursor) isn't bundled here — VS Code's extension packaging story for `SKILL.md` is still unclear. What you get is reliable MCP tool access plus VS Code's native key management. The panel is available whenever you mention `mumo` in Agent chat.
+VS Code's Copilot doesn't have a `SKILL.md` discovery mechanism the way Claude Code and Cursor do, so the auto-triggering skill from those plugins doesn't apply here. What you get is reliable MCP tool access plus VS Code's native key management. The panel is available whenever you mention `mumo` in Agent chat.
 
 ## Requirements
 
