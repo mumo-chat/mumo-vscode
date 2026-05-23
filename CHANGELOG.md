@@ -1,11 +1,15 @@
 # Changelog
 
+## 0.3.2 — 2026-05-22
+
+README update.
+
 ## 0.3.1 — 2026-05-05
 
 Marketplace listing cleanup. No runtime behavior change.
 
-- README intro no longer directs visitors to companion plugins for other IDEs. Cross-product discovery stays in the footer Links section where it belongs.
-- "Why explicit invocation" rewritten without comparison to other agent platforms. The positive framing ("naming `mumo` routes deterministically") replaces the previous "VS Code's Copilot doesn't have what those other platforms have" framing.
+- README intro tightened; cross-IDE pointers removed.
+- "Why explicit invocation" rewritten with positive framing — "naming `mumo` routes deterministically" — replacing the prior comparison-based framing.
 
 ## 0.3.0 — 2026-05-05
 
@@ -15,15 +19,15 @@ Native UX lift. The runtime MCP path is unchanged — same `https://mumo.chat/ap
 - **Status bar item** — persistent `$(comment-discussion) mumo` when configured, `$(warning) mumo: no key` when not. Clicking it opens the key prompt. Refreshes on activate, after every key-set, and on `mumo.serverUrl` config changes.
 - **`mumo.serverUrl` setting** — override the MCP endpoint for self-hosted or staging. Read inside `provideMcpServerDefinitions` so config changes take effect without a window reload; `onDidChangeConfiguration` fires the provider's `didChange` event.
 - **`untrustedWorkspaces.supported: true`** — the extension only stores a secret and registers a remote HTTP MCP server. No filesystem reads, no command execution. Trust prompt is gone.
-- **`skills/` excluded from the published `.vsix`** — VS Code has no `SKILL.md` loader, so the directory was inert dead weight in the bundle. Still in the GitHub repo as cross-repo reference.
+- **`skills/` excluded from the published `.vsix`** — VS Code has no `SKILL.md` loader, so the directory was inert dead weight in the bundle. Still in the GitHub repo for reference.
 
 ## 0.2.0 — 2026-05-05
 
-Architecture parity with [`mumo-mcp@0.2.x`](https://github.com/mumo-chat/mumo-mcp) and [`mumo-cursor@0.2.x`](https://github.com/mumo-chat/mumo-cursor). VS Code's Copilot agent doesn't consume `SKILL.md` directly the way Claude Code and Cursor do, so the skill content ships as informational/cross-repo reference, not active behavior. The MCP server registration + native `SecretStorage` for the API key are unchanged.
+Architecture rewrite. VS Code's Copilot agent doesn't consume `SKILL.md` directly the way some other host agents do, so the skill content ships as informational reference, not active behavior. The MCP server registration + native `SecretStorage` for the API key are unchanged.
 
-- `package.json` — version bump to 0.2.0, author updated to `mumo`, homepage updated to `/install`, description aligned with the family ("Multi-model deliberation panel..."), keywords reorganized.
-- README — `wait_for_round` added to the tool list (seven tools, was missing since 0.1.2). Cowork dropped from cross-references. Links repointed to `/install` and `/docs/mcp`.
-- `skills/mumo/SKILL.md`, `skills/mumo/playbooks/`, `skills/mumo/reference/` — copied over from the v0.2.x skill content for cross-repo consistency. Inert in VS Code today; if Copilot's skill story matures, no source-of-truth divergence to reconcile.
+- `package.json` — version bump to 0.2.0, author updated to `mumo`, homepage updated to `/install`, description updated to "Multi-model deliberation panel...", keywords reorganized.
+- README — `wait_for_round` added to the tool list (seven tools, was missing since 0.1.2). Links repointed to `/install` and `/docs/mcp`.
+- `skills/mumo/SKILL.md`, `skills/mumo/playbooks/`, `skills/mumo/reference/` — added for informational reference. Inert in VS Code today; if Copilot's skill story matures, the content is already in place.
 
 ## 0.1.2 — 2026-04-24
 
@@ -45,5 +49,4 @@ Initial release.
 - Registers `mumo` MCP server via VS Code's `lm.registerMcpServerDefinitionProvider` API (stable on VS Code 1.101+). Streamable-HTTP transport to `https://mumo.chat/api/mcp`.
 - First-run API key prompt; key stored in VS Code `SecretStorage` (OS-native keychain). No env-var export required.
 - Commands: `mumo: Set API Key`, `mumo: Open Recent Sessions`.
-- 512×512 dark-background icon (shared with the Claude Code / Cursor plugins).
-- Auto-triggering skill from `mumo-chat/mumo-mcp` is not bundled in v0.1.0 — VS Code's extension packaging for SKILL.md bundling is still unclear. Users who want skill auto-triggering should additionally install via the GitHub MCP Registry (pending listing).
+- 512×512 dark-background icon.

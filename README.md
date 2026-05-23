@@ -62,8 +62,6 @@ Copilot's agent mode picks tools based on intent. Naming `mumo` in your prompt r
 - Install guide — https://mumo.chat/install
 - MCP reference — https://mumo.chat/docs/mcp
 - REST API — https://mumo.chat/docs/api
-- Claude Code plugin — https://github.com/mumo-chat/mumo-mcp
-- Cursor plugin — https://github.com/mumo-chat/mumo-cursor
 - Issues — https://github.com/mumo-chat/mumo-vscode/issues
 
 ## License
