@@ -2,7 +2,7 @@
   "name": "mumo-vscode",
   "displayName": "mumo",
   "description": "Multi-model deliberation panel. Diverse AI voices + claim-level reactions on contested decisions.",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "publisher": "mumo",
   "license": "MIT",
   "author": {
