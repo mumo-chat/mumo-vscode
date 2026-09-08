@@ -2,7 +2,7 @@
 
 **Multi-model responses + cross-model reactions. Want more rounds? Context carries automatically. Stop when you have what you need.**
 
-Claude, GPT, Gemini, Grok, Qwen, GLM, Kimi in parallel. For contested decisions — architecture, plan review, strategy — where a single model might be confidently wrong.
+Claude, GPT, Gemini, Grok, DeepSeek, Kimi, and more, in parallel. Each model answers in full and then reacts to the others' claims in its own words — typed cross-model reactions, not a merged verdict — for architecture, plan review, pricing, and strategy calls worth checking across labs.
 
 ---
 
@@ -22,7 +22,7 @@ Claude, GPT, Gemini, Grok, Qwen, GLM, Kimi in parallel. For contested decisions 
 
 ## What's in the box
 
-- **MCP server registration** — wires `https://mumo.chat/api/mcp` into VS Code's MCP provider registry. Seven tools: `create_deliberation`, `wait_for_round`, `append_round`, `get_session`, `list_sessions`, `list_models`, `get_credit`.
+- **MCP server registration** — wires `https://mumo.chat/api/mcp` into VS Code's MCP provider registry. Eight tools: `create_deliberation`, `wait_for_round`, `append_round`, `get_session`, `list_sessions`, `list_models`, `share_session`, `get_credit`.
 - **Native key storage** — uses VS Code's `SecretStorage` (macOS Keychain / Windows Credential Manager / Linux libsecret). No `MUMO_API_KEY` env-var export required.
 - **Walkthrough** — auto-opens on first install: create a key, paste it, try mumo in Copilot Chat.
 - **Status bar** — shows `mumo` when configured, `mumo: no key` otherwise. Click to set the key.

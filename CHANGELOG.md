@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.6.0 — 2026-09-08
+
+Coordinated client release rendered from the mumo-mcp 0.6.0 baseline. Version jumps from 0.3.2 to rejoin the shared line: the 0.5.0 skill content landed on 2026-07-04 without a release.
+
+- `README.md`: all eight tools named (`share_session` was missing); intro names the current model families and the typed cross-model reactions.
+- `skills/mumo/SKILL.md` (repo-facing only; not shipped in the `.vsix`): `share_session` in the tools table; `wait_for_round` one-id form; updated intro. `references/operating-notes.md` re-synced.
+- No change to the extension code, MCP provider, or walkthrough.
+
 ## 0.3.2 — 2026-05-22
 
 README update.
