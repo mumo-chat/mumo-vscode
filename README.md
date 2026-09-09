@@ -22,7 +22,7 @@ Claude, GPT, Gemini, Grok, DeepSeek, Kimi, and more, in parallel. Each model ans
 
 ## What's in the box
 
-- **MCP server registration** — wires `https://mumo.chat/api/mcp` into VS Code's MCP provider registry. Eight tools: `create_deliberation`, `wait_for_round`, `append_round`, `get_session`, `list_sessions`, `list_models`, `share_session`, `get_credit`.
+- **MCP server registration** — wires `https://mumo.chat/api/mcp` into VS Code's MCP provider registry. Tools: `create_deliberation`, `wait_for_round`, `append_round`, `get_session`, `list_sessions`, `list_models`, `share_session`, `get_credit`.
 - **Native key storage** — uses VS Code's `SecretStorage` (macOS Keychain / Windows Credential Manager / Linux libsecret). No `MUMO_API_KEY` env-var export required.
 - **Walkthrough** — auto-opens on first install: create a key, paste it, try mumo in Copilot Chat.
 - **Status bar** — shows `mumo` when configured, `mumo: no key` otherwise. Click to set the key.
