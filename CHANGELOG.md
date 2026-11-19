@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.7.0 — 2026-11-19
+
+Coordinated client release rendered from the mumo-mcp 0.7.0 baseline.
+
+- New tool: `ask_a_model` puts a question to one model of your choice and returns one answer, with no cross-model reactions or claim map. The extension registers the server without a tool allowlist, so the tool is available as soon as the server lists it.
+- README tool list updated; the bundled `skills/mumo/SKILL.md` re-rendered from the baseline (the extension does not ship it).
+
 ## 0.6.0 — 2026-09-08
 
 Coordinated client release rendered from the mumo-mcp 0.6.0 baseline. Version jumps from 0.3.2 to rejoin the shared line: the 0.5.0 skill content landed on 2026-07-04 without a release.
