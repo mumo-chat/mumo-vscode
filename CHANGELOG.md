@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased — 2026-11-20
+
+The bundled `skills/mumo/` files were re-rendered from the mumo-mcp 0.8.0 baseline: the skill says "reactions" where it said "claim map", and two reference files are renamed (`references/claim-maps.md` is now `references/reading-reactions.md`; `references/snippets.md` is now `references/writing-reactions.md`). The extension does not ship those files, and the extension itself is unchanged.
+
 ## 0.7.0 — 2026-11-19
 
 Coordinated client release rendered from the mumo-mcp 0.7.0 baseline.
