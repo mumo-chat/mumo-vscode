@@ -10,9 +10,9 @@ Claude, GPT, Gemini, Grok, DeepSeek, Kimi, and more, in parallel. Each model ans
 
 *Invoke mumo from Copilot Chat — the agent routes through MCP, convenes the panel, and returns the models' synthesis inside VS Code.*
 
-![The mumo claim map — what every model agreed on, challenged, or flagged for deeper exploration](./images/screenshot-claim-map.png)
+![The models' reactions in mumo — what every model agreed on, challenged, or flagged for deeper exploration](./images/screenshot-claim-map.png)
 
-*The claim map at [mumo.chat](https://mumo.chat) — each contested statement plus every model's reaction (keep, challenge, explore, core, shift). Not a consensus answer; the structure underneath it.*
+*The models' reactions at [mumo.chat](https://mumo.chat) — each contested statement plus every model's reaction (keep, challenge, explore, core, shift). Not a consensus answer; the structure underneath it.*
 
 ![A multi-round mumo session carrying context forward across rounds](./images/screenshot-rounds.png)
 
