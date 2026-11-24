@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — 2026-11-24
+
+The bundled `skills/mumo/` files were re-rendered for mumo MCP server 1.6.0.
+
+- A failed model's line now shows its error code and a short sentence saying what happened, and a response that did not finish normally shows a short state. The skill's notes describe the new lines.
+- A compact re-read shows the model and how it ended, without token counts.
+- A result that begins `Error: internal_error` means mumo itself failed. The skill tells the agent to say so and not to change the arguments.
+- A round's web link appears once, in the header.
+
 ## Unreleased — 2026-11-21
 
 The bundled `skills/mumo/` files were re-rendered from the mumo-mcp 0.9.0 baseline, which goes with mumo MCP server 1.4.0: `wait_for_round` results are text only and the skill branches on the `Action:` line (the second line of the result); a new section, "Hand the wait to a subagent", covers delegating the wait where the client supports subagents; refusals start with `Error: <code>`; `references/operating-notes.md` and `references/synthesis.md` are updated to match. No extension code changed.
